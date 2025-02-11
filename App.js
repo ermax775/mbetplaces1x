@@ -4,6 +4,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import TabNavigation from './App/Navigation/TabNavigation';
 import { useEffect, useState } from 'react';
 import * as Location from 'expo-location'; 
+import { UserLocationContext } from './App/Context/UserLocationContext';
 
 export default function App() {
 
@@ -23,7 +24,7 @@ export default function App() {
 
       let location = await Location.getCurrentPositionAsync({});
       setLocation(location);
-      console.log(location)
+      // console.log(location)
      
     })();
 
@@ -33,9 +34,14 @@ export default function App() {
     <View style={styles.container}>
       {/* <Text>Welcome to MBet-Adera-Places-1x App!</Text> */}
       
-      <NavigationContainer>
-        <TabNavigation/>
-      </NavigationContainer>
+      <UserLocationContext.Provider value={{location, setLocation}}>
+
+        <NavigationContainer>
+          <TabNavigation/>
+        </NavigationContainer>
+
+      </UserLocationContext.Provider>
+
 
     </View>
   );
