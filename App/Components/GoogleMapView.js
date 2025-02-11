@@ -9,10 +9,13 @@ export default function GoogleMapView() {
     <View style={{ borderRadius: 20, overflow: "hidden" }}>
       {/* <Text> GoogleMapView </Text> */}
       <MapView 
-      style={{
-        width: Dimensions.get("screen").width * 0.89,
-        height: Dimensions.get("screen").height * 0.23,
-            }}
+        style={{
+          width: Dimensions.get("screen").width * 0.89,
+          height: Dimensions.get("screen").height * 0.23,
+              }}
+      provider={PROVIDER_GOOGLE}
+      showsUserLocation={true}
+
       >
 
       </MapView>
