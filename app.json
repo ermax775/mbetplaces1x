@@ -19,10 +19,24 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+       
+      },
+       "googleServicesFile": "./google-services.json",
+      "package":"com.mbetplaces1x.findplace"
+      // "googleMapsApiKey" : "AlzaSySY-xvliifNfeLMUlKsBbfHUNmrkdFEn1G"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    }, 
+
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow Mbet-Adera to use your location."
+        }
+      ]
+    ]
+
   }
 }
