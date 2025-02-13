@@ -13,7 +13,7 @@
 //         icon:require('./../../../assets/gas.png')
 //     },
 //     {
-//         id:2,
+//         id:2,V
 //         name:'Restaurants',
 //         value:'restaurant',
 //         icon:require('./../../../assets/food.png')
@@ -55,13 +55,13 @@ import { View, Text, FlatList, TouchableOpacity } from 'react-native'
 import React from 'react'
 import CategoryItem from './CategoryItem'
 
-export default function CategoryList() {
+export default function CategoryList({setSelectedCategory}) {
 
     const categoryList=[
         {
             id:1,
             name:'Hair Salon',
-            value:'hairsalon',
+            value:'hair_care',
             icon:require('./../../../assets/salon.png')
         },
 
@@ -81,8 +81,32 @@ export default function CategoryList() {
             id:4,
             name:'Super - market',
             value:'supermaket',
-            icon:require('./../../../assets/gas.png')
+            icon:require('./../../../assets/supermarket.png')
         },
+        {
+            id:5,
+            name:'Pharmacy',
+            value:'drugstore',
+            icon:require('./../../../assets/medicine.png')
+        },
+        {
+            id:6,
+            name:'Suqk / Shops / Grocery',
+            value:'shopping_mall',
+            icon:require('./../../../assets/grocery.png')
+        },
+        {
+            id:7,
+            name:'Boutique',
+            value:'clothing_store',
+            icon:require('./../../../assets/merchandise2.png')
+        },
+        {
+          id:9,
+          name:'ATM',
+          value:'atm',
+          icon:require('./../../../assets/merchandise.png')
+      },
     ]
 
 
@@ -111,12 +135,10 @@ export default function CategoryList() {
             //     <CategoryItem category={item} />
             // </View>
 
-          <TouchableOpacity 
-          onPress={()=> console.log(item.name)}>
-          {/* onPress={()=>setSelectedCategory(item.value)} */}
-            <CategoryItem category={item} />
-          </TouchableOpacity>
-        
+            <TouchableOpacity 
+              onPress={()=>setSelectedCategory(item.value)} >
+              <CategoryItem category={item} />
+            </TouchableOpacity>
         )}
         />
 
