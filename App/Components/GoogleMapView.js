@@ -39,7 +39,7 @@ export default function GoogleMapView() {
     <View style={{ marginTop: 20 }}>
       <Text style={{ fontSize: 20, 
         marginBottom: 10, fontWeight: "600",fontFamily:'raleway-bold' }}>
-        Top Near By Places
+        Top MBet-Adera Near By Places
       </Text>
       <View style={{ borderRadius: 20, overflow: "hidden" }}>
     {location?    <MapView
