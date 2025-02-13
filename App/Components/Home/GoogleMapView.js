@@ -2,7 +2,7 @@ import { View, Text, Dimensions } from 'react-native'
 import React, { useContext, useEffect, useState } from 'react'
 // import MapView from 'react-native-maps'
 import MapView, { MapMarker, Marker, PROVIDER_GOOGLE } from "react-native-maps";
-import { UserLocationContext } from '../Context/UserLocationContext';
+import { UserLocationContext } from '../../Context/UserLocationContext';
 
 
 

@@ -1,7 +1,7 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 import Header from '../Components/Home/Header'
-import GoogleMapView from '../Components/GoogleMapView'
+import GoogleMapView from '../Components/Home/GoogleMapView'
 import CategoryList from '../Components/Home/CategoryList'
 
 export default function Home() {
